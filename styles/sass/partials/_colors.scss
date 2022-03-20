@@ -1,0 +1,327 @@
+/**
+* Color tool documentation:
+* https://www.kevinpowell.co/article/using-my-colors/
+* https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps
+* https://www.sitepoint.com/managing-color-values-with-sass/
+*/
+
+
+
+// Site - colors 
+$lmsryellow: #ffba08;
+$bg: #a2aebb;
+$primary: #F0E6EF;
+$secondary: #1c3144;
+$tertiary: #d00000;
+$activeBlue: #3f88c5;
+$accent: #1c3144;
+$cta1: #d6c600e8;
+$cta2: #00133a;
+
+
+// Color Map
+$colors: (
+  yellow: $lmsryellow,
+  bg: $bg,
+  primary: $primary,
+  secondary: $secondary,
+  tertiary: $tertiary,
+  activeBlue: $activeBlue,
+  accent: $accent,
+  cta1: $cta1,
+  cta2: $cta2
+);
+
+$variations: (
+  light: (
+    function: lighten,
+    parameters: 15%
+  ),
+  dark: (
+    function: darken,
+    parameters: 10%
+  ),
+  fade: (
+    function: rgba,
+    parameters: .7
+  ),
+  gray: (
+    function: grayscale
+  ),
+  shade-1: (
+    function: mix,
+    parameters: white 10%
+  ),
+  shade-2: (
+    function: mix,
+    parameters: white 20%
+  ),
+  shade-3: (
+    function: mix,
+    parameters: white 30%
+  ),
+  shade-4: (
+    function: mix,
+    parameters: white 40%
+  ),
+  shade-5: (
+    function: mix,
+    parameters: white 50%
+  ),
+  shade-6: (
+    function: mix,
+    parameters: white 60%
+  ),
+  shade-7: (
+    function: mix,
+    parameters: white 70%
+  ),
+  shade-8: (
+    function: mix,
+    parameters: white 80%
+  ),
+  shade-9: (
+    function: mix,
+    parameters: white 90%
+  ),
+  shade-10: (
+    function: mix,
+    parameters: white 100%
+  ),
+  sat-1: (
+    function: saturate,
+    parameters: 10%
+  ),
+  sat-2: (
+    function: saturate,
+    parameters: 20%
+  ),
+  sat-3: (
+    function: saturate,
+    parameters: 30%
+  ),
+  sat-4: (
+    function: saturate,
+    parameters: 40%
+  ),
+  sat-5: (
+    function: saturate,
+    parameters: 50%
+  ),
+  sat-6: (
+    function: saturate,
+    parameters: 60%
+  ),
+  sat-7: (
+    function: saturate,
+    parameters: 70%
+  ),
+  sat-8: (
+    function: saturate,
+    parameters: 80%
+  ),
+  sat-9: (
+    function: saturate,
+    parameters: 90%
+  ),
+  sat-10: (
+    function: saturate,
+    parameters: 100%
+  )
+);
+
+@function color-variation($color, $variation: false) {
+  @if map-has-key($colors, $color) {
+    $color: map-get($colors, $color);
+  } @else {
+    @if type-of($color) != color {
+      @error "Invalid color name: `#{$color}`.";
+    }
+  }
+
+  @if $variation {
+    @if not map-has-key($variations, $variation) {
+      @error "Invalid $variation: `#{$variation}`.";
+    } @else {
+      $this-variation: map-get($variations, $variation);
+      $args: join(map-get($this-variation, function), $color);
+      @if map-get($this-variation, parameters) {
+        $args: join($args, map-get($this-variation, parameters));
+      }
+      @return call($args...);
+    }
+  }
+  @return $color;
+}
+
+// Convinience function for color-variation
+@function cv($color, $variation:false) {
+  @return color-variation($color, $variation);
+}
+
+//Usage: cv('secondary', 'sat-10');
+
+// Social Media
+$facebook: #3b5998;
+$twitter: #1da1f2;
+
+// Factors
+$hoverFactor: 15%;
+$borderFactor: 30%;
+$transitionDuration: 150ms;
+
+// Functions 
+@function logoColors($color){
+  @return desaturate(darken($color, 1%), 5%);
+}
+
+@function clr($color-key) {
+  $color: map-get($imp-colors, $color-key);
+  @return $color;
+}
+
+// $testColor: changeHue(#007bff, 10%);
+// @debug "testColor: " + $testColor;
+
+
+//Capone Colors - dark -> light
+$imp-colors: (
+  "c1": $cta1, 
+  "c2": $cta2,  //$borderColor
+  "c3": $primary,
+  "c4": adjust-hue($primary, 5%),
+  "c5": adjust-hue($primary, 15%),
+  "c6": adjust-hue($primary, 25%),
+  "c7": adjust-hue($primary, 35%),
+  "c8": adjust-hue($primary, 45%),
+  "c9": adjust-hue($primary, 55%),
+  "c10": $bg,
+);
+
+// 00aaff
+
+$imp-color-map: (
+  "c1": (
+    primary: clr("c1"),
+    hover: lighten(clr("c1"), $hoverFactor),
+    border: darken(clr("c1"), $borderFactor),
+    text: clr("c5")
+  ),
+  "c2": (
+    primary: clr("c2"),
+    hover: lighten(clr("c2"), $hoverFactor),
+    border: darken(clr("c2"), $borderFactor),
+    text: clr("c6")
+  ),
+  "c3": (
+    primary: clr("c3"),
+    hover: lighten(clr("c3"), $hoverFactor),
+    border: darken(clr("c3"), $borderFactor),
+    text: clr("c10")
+  ),
+  "c4": (
+    primary: clr("c4"),
+    hover: lighten(clr("c4"), $hoverFactor),
+    border: darken(clr("c4"), $borderFactor),
+    text: clr("c9")
+  ),
+  "c5": (
+    primary: clr("c5"),
+    hover: lighten(clr("c5"), $hoverFactor),
+    border: darken(clr("c5"), $borderFactor),
+    text: clr("c2")
+  ),
+  "c6": (
+    primary: clr("c6"),
+    hover: lighten(clr("c6"), $hoverFactor),
+    border: darken(clr("c6"), $borderFactor),
+    text: clr("c3")
+  ),
+  "c7": (
+    primary: clr("c7"),
+    hover: lighten(clr("c7"), $hoverFactor),
+    border: darken(clr("c7"), $borderFactor),
+    text: clr("c4")
+  ),
+  "c8": (
+    primary: clr("c8"),
+    hover: lighten(clr("c8"), $hoverFactor),
+    border: darken(clr("c8"), $borderFactor),
+    text: clr("c5")
+  ),
+  "c9": (
+    primary: clr("c9"),
+    hover: lighten(clr("c9"), $hoverFactor),
+    border: darken(clr("c9"), $borderFactor),
+    text: clr("c6")
+  ),
+  "c10": (
+    primary: #12014e,
+    hover: lighten(#12014e, $hoverFactor),
+    border: darken(#12014e, $borderFactor),
+    text: #fff
+  )
+);
+
+@mixin bg-color-modifiers {
+  @each $name, $hex in $imp-colors {
+    &-#{$name} {
+      color: #fff !important;
+      background-color: #{clr($name)} !important; 
+    }
+  }
+}
+
+@mixin txt-color-modifiers {
+  @each $name, $hex in $imp-colors {
+    &-#{$name} {
+      color: clr($name) !important; 
+    }
+  }
+}
+
+@mixin btn-generator {
+  @each $name, $submap in $imp-color-map {
+    &-#{$name} {
+      transition: background-color $transitionDuration linear;
+      &:hover { cursor: pointer; }
+      color: map-get($submap, 'text');
+      background-color: map-get($submap, 'primary');
+      border: 1px solid map-get($submap, 'border');
+      &:hover {
+        background-color: map-get($submap, 'hover');
+      }
+    }
+  }
+}
+
+//Generate color based map
+.imp-bg-color {
+  @include bg-color-modifiers;
+}
+
+//Generate Button Styles
+.imp-btn {
+  @include btn-generator;
+}
+
+.btn-rnd {
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  min-width: 100px;
+}
+
+//TODO: Move me to a text utils area
+//TODO font-sizes should be generated dynamically based off a standard base size (16px aka 1em)
+.title {
+  color: clr("c3");
+  font-size: 12pt;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.imp-txt {
+  @include txt-color-modifiers;
+}

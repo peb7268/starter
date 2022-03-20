@@ -1,0 +1,71 @@
+@import './colors.scss';
+
+$main-wrapper-width: 1150px;
+
+@function img_base($isLocal: true){
+    $path: "initial";
+
+    @if($isLocal) {
+        $path: "./../img";
+    } @else {
+        $path: "http://windowcraftersinc.com/wp-content/themes/windowcrafters/img";
+    }
+
+    @return $path;
+}
+
+@function get_image_path($path_minus_base, $isLocal: true){
+    @return "#{img_base($isLocal)}/#{$path_minus_base}";
+}
+
+@mixin heading-decor {
+    background: url('./../img/header-decor.png') 0 5px no-repeat;
+    padding-left: 75px;
+}
+
+@mixin standard-font {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin main-heading {
+    @include standard-font;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 25pt;
+    margin: 0 0 60px;
+    line-height: 1.2;
+}
+
+@mixin secondary-heading {
+    @include standard-font;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18pt;
+    margin: 0 0 20px;
+}
+
+@mixin interior-headline {
+    @include main-heading;
+    color: $light-black;
+    margin: 20px 0;
+}
+
+@mixin standard_cta_box {
+    margin: 0 0 25px;
+    background: $cta-gray;
+    padding: 40px;
+}
+
+@mixin popup_link {
+    color: $logo-green;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@mixin hoverable($color){
+    background-color: lighten($color, 10%) !important; 
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0,0,0, .4);
+}

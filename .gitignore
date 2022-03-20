@@ -1,0 +1,18 @@
+# Annoying File Types
+.DS_Store
+*.mp4
+
+
+# Packages
+node_modules
+vendor
+dist
+
+# Generic Wordpress stuff
+readme.html
+xmlrpc.php
+
+# PHP stuff
+
+
+

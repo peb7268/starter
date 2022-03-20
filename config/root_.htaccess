@@ -1,0 +1,35 @@
+# For siteground hosting, .htaccess that goes in the root to perform the following rewrites:
+# wordpress .htaccess rewrite masks a subfolder and redirects it to the root so you can use 
+# symlinked deployment strategies. So http://windowcraftersinc.com lives at http://windowcraftersinc.com/current but current is 
+# masked in the url
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^windowcraftersinc.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.windowcraftersinc.com$
+RewriteCond %{REQUEST_URI} !current/
+RewriteRule (.*) /current/$1 [L]
+
+#[code autolinks="false"]
+#RedirectMatch 301 ^/current/$ http://windowcraftersinc.com/
+#[/code]
+
+# BEGIN WordPress
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# END WordPress
+
+# Change example.com to be your main domain again.
+# Change 'subdirectory' to be the directory you will use for your main domain
+# followed by / then the main file for your site, index.php, index.html, etc.
+#RewriteCond %{HTTP_HOST} ^(www.)?windowcraftersinc.com$
+#RewriteRule ^(.*)$ /current/$1
+#RewriteRule ^(/)?$ current/
+
+#RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+#RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
