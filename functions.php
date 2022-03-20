@@ -4,6 +4,7 @@ if ( $_ENV['DEBUG'] === "true" ) {
     echo "<pre>";
     print_r($_ENV);
     echo "</pre>";
+    die('');
 }
 
 /* Globals */
