@@ -24,53 +24,15 @@
     <a href="#" id="mobile-nav">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </a>
-
-    <div class="header-top">
-        <div class="left">
-            <ul class="menu left">
-                <div class="menu-header">
-                    <a href="#" class="login-register" title="login / register">
-                        <i class="far fa-user-circle"></i>
-                    </a>
-                </div>
-            </ul>
-        </div>
-        <div class="middle"></div>
-        <div class="right">
-            <a href="tel:720-981-9400" class="phone">720-981-9400</a>
-            <a href="https://goo.gl/maps/uo9PDbFgg24Kv1ou7" class="directions" target="_blank">
-                <i class="fas fa-map-marked-alt"></i>
-            </a>
-            <a href="mailto:info@LittletonMSR.com">
-                <i class="far fa-envelope"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="wrapper-inner">
-        <div class="left"></div>
-        <div id="logo" class="center">
-            <a href="<?php bloginfo('wpurl');?>">
-                <!-- <img src="https://littletonmsr.com/wp-content/uploads/2020/06/FinalHor-e1591119526486.png" alt="logo"> -->
-                <h1>littleton massage</h1>
-                <div class="tagline">
-                    <span>&amp; sports</span>
-                    <span>recovery</span>
-                </div>
-            </a>
-        </div>
-        <div class="right">
-            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-        </div>
-    </div>
 </header>
 
 <?php if (is_page() && ! is_page('home')) { ?>
-<div class="banner-img">
-    <h2 class="page_name">
-        <?php echo $pagename; ?>
-    </h2>
-    <img src="<?php echo THEME_PATH; ?>/img/<?php echo $pagename; ?>.jpg" alt="banner-image" />
-</div>
+    <div class="banner-img">
+        <h2 class="page_name">
+            <?php echo $pagename; ?>
+        </h2>
+        <img src="<?php echo THEME_PATH; ?>/img/<?php echo $pagename; ?>.jpg" alt="banner-image" />
+    </div>
 <?php } ?>
 
+<h1>header</h1>
