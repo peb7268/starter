@@ -1,0 +1,188 @@
+/**
+* Color tool documentation:
+* https://www.kevinpowell.co/article/using-my-colors/
+* https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps
+* https://www.sitepoint.com/managing-color-values-with-sass/
+*/
+.imp-bg-color-c1 {
+  color: #fff !important;
+  background-color: #d6c600e8 !important; }
+
+.imp-bg-color-c2 {
+  color: #fff !important;
+  background-color: #00133a !important; }
+
+.imp-bg-color-c3 {
+  color: #fff !important;
+  background-color: #F0E6EF !important; }
+
+.imp-bg-color-c4 {
+  color: #fff !important;
+  background-color: #f0e6ee !important; }
+
+.imp-bg-color-c5 {
+  color: #fff !important;
+  background-color: #f0e6ed !important; }
+
+.imp-bg-color-c6 {
+  color: #fff !important;
+  background-color: #f0e6eb !important; }
+
+.imp-bg-color-c7 {
+  color: #fff !important;
+  background-color: #f0e6e9 !important; }
+
+.imp-bg-color-c8 {
+  color: #fff !important;
+  background-color: #f0e6e8 !important; }
+
+.imp-bg-color-c9 {
+  color: #fff !important;
+  background-color: #f0e6e6 !important; }
+
+.imp-bg-color-c10 {
+  color: #fff !important;
+  background-color: #a2aebb !important; }
+
+.imp-btn-c1 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #d6c600e8;
+  border: 1px solid rgba(61, 56, 0, 0.909804); }
+  .imp-btn-c1:hover {
+    cursor: pointer; }
+  .imp-btn-c1:hover {
+    background-color: rgba(255, 239, 36, 0.909804); }
+
+.imp-btn-c2 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #00133a;
+  border: 1px solid black; }
+  .imp-btn-c2:hover {
+    cursor: pointer; }
+  .imp-btn-c2:hover {
+    background-color: #002c87; }
+
+.imp-btn-c3 {
+  transition: background-color 150ms linear;
+  color: #a2aebb;
+  background-color: #F0E6EF;
+  border: 1px solid #b786b2; }
+  .imp-btn-c3:hover {
+    cursor: pointer; }
+  .imp-btn-c3:hover {
+    background-color: white; }
+
+.imp-btn-c4 {
+  transition: background-color 150ms linear;
+  color: #f0e6e6;
+  background-color: #f0e6ee;
+  border: 1px solid #b786ae; }
+  .imp-btn-c4:hover {
+    cursor: pointer; }
+  .imp-btn-c4:hover {
+    background-color: white; }
+
+.imp-btn-c5 {
+  transition: background-color 150ms linear;
+  color: #00133a;
+  background-color: #f0e6ed;
+  border: 1px solid #b786a6; }
+  .imp-btn-c5:hover {
+    cursor: pointer; }
+  .imp-btn-c5:hover {
+    background-color: white; }
+
+.imp-btn-c6 {
+  transition: background-color 150ms linear;
+  color: #F0E6EF;
+  background-color: #f0e6eb;
+  border: 1px solid #b7869e; }
+  .imp-btn-c6:hover {
+    cursor: pointer; }
+  .imp-btn-c6:hover {
+    background-color: white; }
+
+.imp-btn-c7 {
+  transition: background-color 150ms linear;
+  color: #f0e6ee;
+  background-color: #f0e6e9;
+  border: 1px solid #b78696; }
+  .imp-btn-c7:hover {
+    cursor: pointer; }
+  .imp-btn-c7:hover {
+    background-color: white; }
+
+.imp-btn-c8 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #f0e6e8;
+  border: 1px solid #b7868e; }
+  .imp-btn-c8:hover {
+    cursor: pointer; }
+  .imp-btn-c8:hover {
+    background-color: white; }
+
+.imp-btn-c9 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #f0e6e6;
+  border: 1px solid #b78786; }
+  .imp-btn-c9:hover {
+    cursor: pointer; }
+  .imp-btn-c9:hover {
+    background-color: white; }
+
+.imp-btn-c10 {
+  transition: background-color 150ms linear;
+  color: #fff;
+  background-color: #12014e;
+  border: 1px solid black; }
+  .imp-btn-c10:hover {
+    cursor: pointer; }
+  .imp-btn-c10:hover {
+    background-color: #23029a; }
+
+.btn-rnd {
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  min-width: 100px; }
+
+.title {
+  color: #F0E6EF;
+  font-size: 12pt;
+  margin: 0 0 10px;
+  text-transform: capitalize; }
+
+.imp-txt-c1 {
+  color: #d6c600e8 !important; }
+
+.imp-txt-c2 {
+  color: #00133a !important; }
+
+.imp-txt-c3 {
+  color: #F0E6EF !important; }
+
+.imp-txt-c4 {
+  color: #f0e6ee !important; }
+
+.imp-txt-c5 {
+  color: #f0e6ed !important; }
+
+.imp-txt-c6 {
+  color: #f0e6eb !important; }
+
+.imp-txt-c7 {
+  color: #f0e6e9 !important; }
+
+.imp-txt-c8 {
+  color: #f0e6e8 !important; }
+
+.imp-txt-c9 {
+  color: #f0e6e6 !important; }
+
+.imp-txt-c10 {
+  color: #a2aebb !important; }

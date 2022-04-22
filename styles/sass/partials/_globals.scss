@@ -25,6 +25,7 @@ span {
 }
 
 .shade {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -60,3 +61,11 @@ span {
   margin: 0 0 50px;
 }
 
+.wrapper {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 0 auto 25px auto;
+}

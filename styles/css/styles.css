@@ -1,0 +1,761 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+/**
+* Color tool documentation:
+* https://www.kevinpowell.co/article/using-my-colors/
+* https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps
+* https://www.sitepoint.com/managing-color-values-with-sass/
+*/
+.imp-bg-color-c1 {
+  color: #fff !important;
+  background-color: #d6c600e8 !important; }
+
+.imp-bg-color-c2 {
+  color: #fff !important;
+  background-color: #00133a !important; }
+
+.imp-bg-color-c3 {
+  color: #fff !important;
+  background-color: #F0E6EF !important; }
+
+.imp-bg-color-c4 {
+  color: #fff !important;
+  background-color: #f0e6ee !important; }
+
+.imp-bg-color-c5 {
+  color: #fff !important;
+  background-color: #f0e6ed !important; }
+
+.imp-bg-color-c6 {
+  color: #fff !important;
+  background-color: #f0e6eb !important; }
+
+.imp-bg-color-c7 {
+  color: #fff !important;
+  background-color: #f0e6e9 !important; }
+
+.imp-bg-color-c8 {
+  color: #fff !important;
+  background-color: #f0e6e8 !important; }
+
+.imp-bg-color-c9 {
+  color: #fff !important;
+  background-color: #f0e6e6 !important; }
+
+.imp-bg-color-c10 {
+  color: #fff !important;
+  background-color: #a2aebb !important; }
+
+.imp-btn-c1 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #d6c600e8;
+  border: 1px solid rgba(61, 56, 0, 0.909804); }
+  .imp-btn-c1:hover {
+    cursor: pointer; }
+  .imp-btn-c1:hover {
+    background-color: rgba(255, 239, 36, 0.909804); }
+
+.imp-btn-c2 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #00133a;
+  border: 1px solid black; }
+  .imp-btn-c2:hover {
+    cursor: pointer; }
+  .imp-btn-c2:hover {
+    background-color: #002c87; }
+
+.imp-btn-c3 {
+  transition: background-color 150ms linear;
+  color: #a2aebb;
+  background-color: #F0E6EF;
+  border: 1px solid #b786b2; }
+  .imp-btn-c3:hover {
+    cursor: pointer; }
+  .imp-btn-c3:hover {
+    background-color: white; }
+
+.imp-btn-c4 {
+  transition: background-color 150ms linear;
+  color: #f0e6e6;
+  background-color: #f0e6ee;
+  border: 1px solid #b786ae; }
+  .imp-btn-c4:hover {
+    cursor: pointer; }
+  .imp-btn-c4:hover {
+    background-color: white; }
+
+.imp-btn-c5 {
+  transition: background-color 150ms linear;
+  color: #00133a;
+  background-color: #f0e6ed;
+  border: 1px solid #b786a6; }
+  .imp-btn-c5:hover {
+    cursor: pointer; }
+  .imp-btn-c5:hover {
+    background-color: white; }
+
+.imp-btn-c6 {
+  transition: background-color 150ms linear;
+  color: #F0E6EF;
+  background-color: #f0e6eb;
+  border: 1px solid #b7869e; }
+  .imp-btn-c6:hover {
+    cursor: pointer; }
+  .imp-btn-c6:hover {
+    background-color: white; }
+
+.imp-btn-c7 {
+  transition: background-color 150ms linear;
+  color: #f0e6ee;
+  background-color: #f0e6e9;
+  border: 1px solid #b78696; }
+  .imp-btn-c7:hover {
+    cursor: pointer; }
+  .imp-btn-c7:hover {
+    background-color: white; }
+
+.imp-btn-c8 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #f0e6e8;
+  border: 1px solid #b7868e; }
+  .imp-btn-c8:hover {
+    cursor: pointer; }
+  .imp-btn-c8:hover {
+    background-color: white; }
+
+.imp-btn-c9 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #f0e6e6;
+  border: 1px solid #b78786; }
+  .imp-btn-c9:hover {
+    cursor: pointer; }
+  .imp-btn-c9:hover {
+    background-color: white; }
+
+.imp-btn-c10 {
+  transition: background-color 150ms linear;
+  color: #fff;
+  background-color: #12014e;
+  border: 1px solid black; }
+  .imp-btn-c10:hover {
+    cursor: pointer; }
+  .imp-btn-c10:hover {
+    background-color: #23029a; }
+
+.btn-rnd {
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  min-width: 100px; }
+
+.title {
+  color: #F0E6EF;
+  font-size: 12pt;
+  margin: 0 0 10px;
+  text-transform: capitalize; }
+
+.imp-txt-c1 {
+  color: #d6c600e8 !important; }
+
+.imp-txt-c2 {
+  color: #00133a !important; }
+
+.imp-txt-c3 {
+  color: #F0E6EF !important; }
+
+.imp-txt-c4 {
+  color: #f0e6ee !important; }
+
+.imp-txt-c5 {
+  color: #f0e6ed !important; }
+
+.imp-txt-c6 {
+  color: #f0e6eb !important; }
+
+.imp-txt-c7 {
+  color: #f0e6e9 !important; }
+
+.imp-txt-c8 {
+  color: #f0e6e8 !important; }
+
+.imp-txt-c9 {
+  color: #f0e6e6 !important; }
+
+.imp-txt-c10 {
+  color: #a2aebb !important; }
+
+/**
+* Old
+* font-family: 'Open Sans Condensed', sans-serif;
+* font-family: 'Roboto', sans-serif;
+* font-family: 'Roboto Slab', serif;,
+* 
+*/
+/**
+* font-family: 'Rambla', sans-serif;
+* font-family: 'DM Serif Text', serif;
+*/
+/**
+* Color tool documentation:
+* https://www.kevinpowell.co/article/using-my-colors/
+* https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps
+* https://www.sitepoint.com/managing-color-values-with-sass/
+*/
+.imp-bg-color-c1 {
+  color: #fff !important;
+  background-color: #d6c600e8 !important; }
+
+.imp-bg-color-c2 {
+  color: #fff !important;
+  background-color: #00133a !important; }
+
+.imp-bg-color-c3 {
+  color: #fff !important;
+  background-color: #F0E6EF !important; }
+
+.imp-bg-color-c4 {
+  color: #fff !important;
+  background-color: #f0e6ee !important; }
+
+.imp-bg-color-c5 {
+  color: #fff !important;
+  background-color: #f0e6ed !important; }
+
+.imp-bg-color-c6 {
+  color: #fff !important;
+  background-color: #f0e6eb !important; }
+
+.imp-bg-color-c7 {
+  color: #fff !important;
+  background-color: #f0e6e9 !important; }
+
+.imp-bg-color-c8 {
+  color: #fff !important;
+  background-color: #f0e6e8 !important; }
+
+.imp-bg-color-c9 {
+  color: #fff !important;
+  background-color: #f0e6e6 !important; }
+
+.imp-bg-color-c10 {
+  color: #fff !important;
+  background-color: #a2aebb !important; }
+
+.imp-btn-c1 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #d6c600e8;
+  border: 1px solid rgba(61, 56, 0, 0.909804); }
+  .imp-btn-c1:hover {
+    cursor: pointer; }
+  .imp-btn-c1:hover {
+    background-color: rgba(255, 239, 36, 0.909804); }
+
+.imp-btn-c2 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #00133a;
+  border: 1px solid black; }
+  .imp-btn-c2:hover {
+    cursor: pointer; }
+  .imp-btn-c2:hover {
+    background-color: #002c87; }
+
+.imp-btn-c3 {
+  transition: background-color 150ms linear;
+  color: #a2aebb;
+  background-color: #F0E6EF;
+  border: 1px solid #b786b2; }
+  .imp-btn-c3:hover {
+    cursor: pointer; }
+  .imp-btn-c3:hover {
+    background-color: white; }
+
+.imp-btn-c4 {
+  transition: background-color 150ms linear;
+  color: #f0e6e6;
+  background-color: #f0e6ee;
+  border: 1px solid #b786ae; }
+  .imp-btn-c4:hover {
+    cursor: pointer; }
+  .imp-btn-c4:hover {
+    background-color: white; }
+
+.imp-btn-c5 {
+  transition: background-color 150ms linear;
+  color: #00133a;
+  background-color: #f0e6ed;
+  border: 1px solid #b786a6; }
+  .imp-btn-c5:hover {
+    cursor: pointer; }
+  .imp-btn-c5:hover {
+    background-color: white; }
+
+.imp-btn-c6 {
+  transition: background-color 150ms linear;
+  color: #F0E6EF;
+  background-color: #f0e6eb;
+  border: 1px solid #b7869e; }
+  .imp-btn-c6:hover {
+    cursor: pointer; }
+  .imp-btn-c6:hover {
+    background-color: white; }
+
+.imp-btn-c7 {
+  transition: background-color 150ms linear;
+  color: #f0e6ee;
+  background-color: #f0e6e9;
+  border: 1px solid #b78696; }
+  .imp-btn-c7:hover {
+    cursor: pointer; }
+  .imp-btn-c7:hover {
+    background-color: white; }
+
+.imp-btn-c8 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #f0e6e8;
+  border: 1px solid #b7868e; }
+  .imp-btn-c8:hover {
+    cursor: pointer; }
+  .imp-btn-c8:hover {
+    background-color: white; }
+
+.imp-btn-c9 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #f0e6e6;
+  border: 1px solid #b78786; }
+  .imp-btn-c9:hover {
+    cursor: pointer; }
+  .imp-btn-c9:hover {
+    background-color: white; }
+
+.imp-btn-c10 {
+  transition: background-color 150ms linear;
+  color: #fff;
+  background-color: #12014e;
+  border: 1px solid black; }
+  .imp-btn-c10:hover {
+    cursor: pointer; }
+  .imp-btn-c10:hover {
+    background-color: #23029a; }
+
+.btn-rnd {
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  min-width: 100px; }
+
+.title {
+  color: #F0E6EF;
+  font-size: 12pt;
+  margin: 0 0 10px;
+  text-transform: capitalize; }
+
+.imp-txt-c1 {
+  color: #d6c600e8 !important; }
+
+.imp-txt-c2 {
+  color: #00133a !important; }
+
+.imp-txt-c3 {
+  color: #F0E6EF !important; }
+
+.imp-txt-c4 {
+  color: #f0e6ee !important; }
+
+.imp-txt-c5 {
+  color: #f0e6ed !important; }
+
+.imp-txt-c6 {
+  color: #f0e6eb !important; }
+
+.imp-txt-c7 {
+  color: #f0e6e9 !important; }
+
+.imp-txt-c8 {
+  color: #f0e6e8 !important; }
+
+.imp-txt-c9 {
+  color: #f0e6e6 !important; }
+
+.imp-txt-c10 {
+  color: #a2aebb !important; }
+
+/**
+* Old
+* font-family: 'Open Sans Condensed', sans-serif;
+* font-family: 'Roboto', sans-serif;
+* font-family: 'Roboto Slab', serif;,
+* 
+*/
+/**
+* font-family: 'Rambla', sans-serif;
+* font-family: 'DM Serif Text', serif;
+*/
+* {
+  box-sizing: border-box; }
+
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+li,
+ul,
+span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: #121; }
+
+.align-right {
+  float: right;
+  margin: 0 0 25px 25px; }
+
+.shade {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  min-height: 615px;
+  background: #a2aebb;
+  z-index: 1; }
+
+.vin {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, black 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, black 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  background: #1c3144;
+  color: #F0E6EF; }
+
+.section {
+  margin: 0 0 50px; }
+
+.wrapper {
+  width: 96%;
+  margin: 0 auto; }
+
+.content {
+  margin: 0 auto 25px auto; }
+
+/**
+* Color tool documentation:
+* https://www.kevinpowell.co/article/using-my-colors/
+* https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps
+* https://www.sitepoint.com/managing-color-values-with-sass/
+*/
+.imp-bg-color-c1 {
+  color: #fff !important;
+  background-color: #d6c600e8 !important; }
+
+.imp-bg-color-c2 {
+  color: #fff !important;
+  background-color: #00133a !important; }
+
+.imp-bg-color-c3 {
+  color: #fff !important;
+  background-color: #F0E6EF !important; }
+
+.imp-bg-color-c4 {
+  color: #fff !important;
+  background-color: #f0e6ee !important; }
+
+.imp-bg-color-c5 {
+  color: #fff !important;
+  background-color: #f0e6ed !important; }
+
+.imp-bg-color-c6 {
+  color: #fff !important;
+  background-color: #f0e6eb !important; }
+
+.imp-bg-color-c7 {
+  color: #fff !important;
+  background-color: #f0e6e9 !important; }
+
+.imp-bg-color-c8 {
+  color: #fff !important;
+  background-color: #f0e6e8 !important; }
+
+.imp-bg-color-c9 {
+  color: #fff !important;
+  background-color: #f0e6e6 !important; }
+
+.imp-bg-color-c10 {
+  color: #fff !important;
+  background-color: #a2aebb !important; }
+
+.imp-btn-c1 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #d6c600e8;
+  border: 1px solid rgba(61, 56, 0, 0.909804); }
+  .imp-btn-c1:hover {
+    cursor: pointer; }
+  .imp-btn-c1:hover {
+    background-color: rgba(255, 239, 36, 0.909804); }
+
+.imp-btn-c2 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #00133a;
+  border: 1px solid black; }
+  .imp-btn-c2:hover {
+    cursor: pointer; }
+  .imp-btn-c2:hover {
+    background-color: #002c87; }
+
+.imp-btn-c3 {
+  transition: background-color 150ms linear;
+  color: #a2aebb;
+  background-color: #F0E6EF;
+  border: 1px solid #b786b2; }
+  .imp-btn-c3:hover {
+    cursor: pointer; }
+  .imp-btn-c3:hover {
+    background-color: white; }
+
+.imp-btn-c4 {
+  transition: background-color 150ms linear;
+  color: #f0e6e6;
+  background-color: #f0e6ee;
+  border: 1px solid #b786ae; }
+  .imp-btn-c4:hover {
+    cursor: pointer; }
+  .imp-btn-c4:hover {
+    background-color: white; }
+
+.imp-btn-c5 {
+  transition: background-color 150ms linear;
+  color: #00133a;
+  background-color: #f0e6ed;
+  border: 1px solid #b786a6; }
+  .imp-btn-c5:hover {
+    cursor: pointer; }
+  .imp-btn-c5:hover {
+    background-color: white; }
+
+.imp-btn-c6 {
+  transition: background-color 150ms linear;
+  color: #F0E6EF;
+  background-color: #f0e6eb;
+  border: 1px solid #b7869e; }
+  .imp-btn-c6:hover {
+    cursor: pointer; }
+  .imp-btn-c6:hover {
+    background-color: white; }
+
+.imp-btn-c7 {
+  transition: background-color 150ms linear;
+  color: #f0e6ee;
+  background-color: #f0e6e9;
+  border: 1px solid #b78696; }
+  .imp-btn-c7:hover {
+    cursor: pointer; }
+  .imp-btn-c7:hover {
+    background-color: white; }
+
+.imp-btn-c8 {
+  transition: background-color 150ms linear;
+  color: #f0e6ed;
+  background-color: #f0e6e8;
+  border: 1px solid #b7868e; }
+  .imp-btn-c8:hover {
+    cursor: pointer; }
+  .imp-btn-c8:hover {
+    background-color: white; }
+
+.imp-btn-c9 {
+  transition: background-color 150ms linear;
+  color: #f0e6eb;
+  background-color: #f0e6e6;
+  border: 1px solid #b78786; }
+  .imp-btn-c9:hover {
+    cursor: pointer; }
+  .imp-btn-c9:hover {
+    background-color: white; }
+
+.imp-btn-c10 {
+  transition: background-color 150ms linear;
+  color: #fff;
+  background-color: #12014e;
+  border: 1px solid black; }
+  .imp-btn-c10:hover {
+    cursor: pointer; }
+  .imp-btn-c10:hover {
+    background-color: #23029a; }
+
+.btn-rnd {
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  min-width: 100px; }
+
+.title {
+  color: #F0E6EF;
+  font-size: 12pt;
+  margin: 0 0 10px;
+  text-transform: capitalize; }
+
+.imp-txt-c1 {
+  color: #d6c600e8 !important; }
+
+.imp-txt-c2 {
+  color: #00133a !important; }
+
+.imp-txt-c3 {
+  color: #F0E6EF !important; }
+
+.imp-txt-c4 {
+  color: #f0e6ee !important; }
+
+.imp-txt-c5 {
+  color: #f0e6ed !important; }
+
+.imp-txt-c6 {
+  color: #f0e6eb !important; }
+
+.imp-txt-c7 {
+  color: #f0e6e9 !important; }
+
+.imp-txt-c8 {
+  color: #f0e6e8 !important; }
+
+.imp-txt-c9 {
+  color: #f0e6e6 !important; }
+
+.imp-txt-c10 {
+  color: #a2aebb !important; }
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0 5px 0; }
+  .top-nav li {
+    margin: 0 5px 0 0;
+    font-size: 14pt; }
+    .top-nav li:first-child {
+      font-size: 12pt; }
+    .top-nav li:last-child {
+      margin-right: 0; }
+    .top-nav li.email {
+      border-left: 1px solid #000;
+      padding-left: 5px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  padding: 0 15px 0 0;
+  align-items: center;
+  border: 1px solid #000; }
+  header #mobile-nav {
+    display: none; }
+  header #logo {
+    text-transform: capitalize;
+    background: #000;
+    color: #fff;
+    padding: 15px 25px;
+    margin: -1px 0 -1px 0;
+    font-size: 17pt; }
+    header #logo span {
+      color: #6ac5fb; }
+  header .nav {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Open Sans Condensed', sans-serif; }
+    header .nav li {
+      margin: 0 15px 0 0; }
+      header .nav li:last-child {
+        margin-right: 0; }
+      header .nav li a {
+        text-transform: capitalize;
+        transition: all 150ms linear;
+        display: inline-block; }
+        header .nav li a:hover, header .nav li a.active {
+          transform: scale(1.1);
+          color: #6ac5fb; }
+
+.banner-img {
+  width: 100%;
+  margin: 0 0 15px 0; }
+  .banner-img img {
+    width: 100%; }

@@ -24,8 +24,8 @@ module.exports = {
     ignoreInitial: true,
   },
   // "server": true,
-  proxy: "http://staging.littletonmsr.com",
-  port: 3000,
+  proxy: "http://dominionrenovation.com",
+  port: 3001,
   middleware: false,
   serveStatic: [],
   ghostMode: {

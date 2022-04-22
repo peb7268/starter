@@ -12,7 +12,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="https://kit.fontawesome.com/0921e7b637.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/79aab98671.js" crossorigin="anonymous"></script>
     <title>
         <?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>
     </title>
@@ -20,19 +20,44 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header>
-    <a href="#" id="mobile-nav">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </a>
-</header>
+<div class="wrapper">
+    <ul class="top-nav">
+        <li class="phone"><a href="tel:770.867.5309">770.867.5309</a></li>
+        <li class="email"><i class="fa-solid fa-envelope"></i></i></li>
+        <li class="instagram"><i class="fa-brands fa-instagram-square"></i></li>
+        <li class="facebook"><i class="fa-brands fa-facebook-square"></i></li>
+    </ul>
 
-<?php if (is_page() && ! is_page('home')) { ?>
-    <div class="banner-img">
-        <h2 class="page_name">
-            <?php echo $pagename; ?>
-        </h2>
-        <img src="<?php echo THEME_PATH; ?>/img/<?php echo $pagename; ?>.jpg" alt="banner-image" />
-    </div>
-<?php } ?>
+    <header>
+        <h1 id="logo">
+            dominion
+            <span>renovation</span>
+        </h1>
+        <a href="#" id="mobile-nav">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <ul class="nav">
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">our work</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+</div>
 
-<h1>header</h1>
+<div class="content wrapper">
+    <?php if (is_page() || is_home()) { ?>
+        <div class="banner-img">
+            <?php if( strlen($pagename) === 0 ) { $pagename = "home"; } ?>
+            
+            <?php if( ! is_home() ) { ?>
+                <h2 class="page_name">
+                    <?php echo $pagename; ?>
+                </h2>
+            <?php } ?>
+            
+            <img src="<?php echo THEME_PATH; ?>/img/<?php echo $pagename; ?>.jpg" alt="banner-image" />
+        </div>
+    <?php } ?>
+
